@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+/*   border: 1px solid red;
+ */  /* se colocar border solid vc consegue ver a borda de todas caixas */
+}
+
+body {
+  background-color: #09090a;
+  color: white;
+
+  height: 100vh;
+}
+
+header {
+  display: flex; /* deixa ao lado e permite por propiedades */
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 48px;
+
+  position: fixed; /* fixou posicionamento na tela */
+  width: 100%;
+}
+
+button {
+  padding: 16px 24px; /* preechimento dentro da caixa */
+  border-radius: 8px;/* arredondamento caixa */
+  border: 1px solid #8b5cf6;
+  background-color: transparent; /* fundo da caixa */
+  color: white;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+}
+
+#form-habits {
+  display: flex;
+
+  padding: 182px 48px 48px; /* foi isado 182 retirado do dev tolls height */
+  width: fit-content;/* fit-content encaixa conbteudo na largura */
+}
+
+.habits {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.habit {
+  width: 64px;
+  height: 64px;
+
+  font-size: 32px;
+
+  display: flex; /* ordenar oq esta dentro da caixa */
+  align-items: center;
+  justify-content: center;
+}
+
+.days {
+  display: flex;
+  gap: 48px;
+  margin-left: 32px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column; /* tirou da horizontal e foi pra vertical */
+  gap: 24px;
+}
+
+.day div {
+  margin-bottom: 8px;
+
+  font-family: 'Roboto Mono';
+  font-size: 20px;
+  line-height: 125%;
+
+  color: #A1A1AA;
+
+  text-align: center;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 64px;
+  height: 64px;
+
+  border: 2px solid #27272A;
+  border-radius: 8px;
+
+  background: #18181B;
+}
+
+input:checked {
+  background: #8B5CF6;
+  border: 2px solid #A78BFA;
+}
+
+@media (max-width: 570px) {
+  button div {
+    display: none;
+  }/* se meu dispositivo chega  a essa largura, ele tira o display*/
+}
+
+
+/* https://www.figma.com/file/TNu2xj81lXeguXmDrrA1uq/Habits-(e)-(Community)?node-id=75%3A567&t=rBzAyR8578IFIV4y-0 */
